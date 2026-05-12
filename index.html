@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MSE Rollmate Network - Find your rollmates across batches 16 to 25 at RUET Materials Science & Engineering." />
   <title>MSE Rollmate Network</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,123 +18,128 @@
   <div class="gradient-orb orb1"></div>
   <div class="gradient-orb orb2"></div>
   <div class="gradient-orb orb3"></div>
+  <div class="cursor-glow"></div>
 
   <header class="navbar">
     <div class="logo">MSE<span>NET</span></div>
 
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="#roll-search">Roll Search</a>
       <a href="#name-search">Name Search</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-left">
-      <div class="tag">RUET • MATERIALS SCIENCE & ENGINEERING</div>
+  <main>
+    <section class="hero">
+      <div class="hero-left">
+        <div class="tag">RUET • MATERIALS SCIENCE & ENGINEERING</div>
 
-      <h1>
-        Find Your
-        <span>Rollmate Network</span>
-      </h1>
+        <h1>
+          Find Your
+          <span>Rollmate Network</span>
+        </h1>
 
-      <p>
-        Explore connections across batches 16 to 25.
-        Search by roll or name and instantly discover your department network.
-      </p>
+        <p>
+          Explore connections across batches 16 to 25.
+          Search by roll or name and instantly discover your department network.
+        </p>
 
-      <div class="hero-buttons">
-        <a href="#roll-search" class="primary-btn">Search Roll</a>
-        <a href="#name-search" class="secondary-btn">Search Name</a>
-      </div>
-    </div>
-
-    <div class="hero-right">
-      <div class="floating-card main-card">
-        <div class="card-top">
-          <span class="dot"></span>
-          Live Batch System
-        </div>
-
-        <h3>Connected Batches</h3>
-
-        <div class="batch-grid">
-          <span>25</span>
-          <span>24</span>
-          <span>23</span>
-          <span>22</span>
-          <span>21</span>
-          <span>20</span>
-          <span>19</span>
-          <span>18</span>
-          <span>17</span>
-          <span>16</span>
+        <div class="hero-buttons">
+          <a href="#roll-search" class="primary-btn">Search Roll</a>
+          <a href="#name-search" class="secondary-btn">Search Name</a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="stats-section">
-    <div class="stat-card">
-      <h2>10</h2>
-      <p>Integrated Batches</p>
-    </div>
+      <div class="hero-right">
+        <div class="floating-card main-card">
+          <div class="card-top">
+            <span class="dot"></span>
+            Live Batch System
+          </div>
 
-    <div class="stat-card">
-      <h2>600+</h2>
-      <p>Student Connections</p>
-    </div>
+          <h3>Connected Batches</h3>
 
-    <div class="stat-card">
-      <h2>2</h2>
-      <p>Smart Search Systems</p>
-    </div>
-  </section>
+          <div class="batch-grid">
+            <span>25</span>
+            <span>24</span>
+            <span>23</span>
+            <span>22</span>
+            <span>21</span>
+            <span>20</span>
+            <span>19</span>
+            <span>18</span>
+            <span>17</span>
+            <span>16</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section class="search-section" id="roll-search">
+    <section class="stats-section">
+      <div class="stat-card">
+        <h2>10</h2>
+        <p>Integrated Batches</p>
+      </div>
 
-    <div class="section-heading">
-      <span>ROLL SEARCH</span>
-      <h2>Search By Roll Number</h2>
-      <p>Get your own information and rollmates from all connected batches.</p>
-    </div>
+      <div class="stat-card">
+        <h2>600+</h2>
+        <p>Student Connections</p>
+      </div>
 
-    <div class="search-panel">
-      <div class="search-icon">#</div>
+      <div class="stat-card">
+        <h2>2</h2>
+        <p>Smart Search Systems</p>
+      </div>
+    </section>
 
-      <input
-        type="text"
-        id="rollInput"
-        placeholder="Enter Roll Number (Example: 2513001)"
-      />
+    <section class="search-section" id="roll-search">
 
-      <button onclick="searchRoll()">Search</button>
-    </div>
+      <div class="section-heading">
+        <span>ROLL SEARCH</span>
+        <h2>Search By Roll Number</h2>
+        <p>Get your own information and rollmates from all connected batches.</p>
+      </div>
 
-    <div id="result"></div>
-  </section>
+      <div class="search-panel">
+        <div class="search-icon" aria-hidden="true">#</div>
 
-  <section class="search-section alt-section" id="name-search">
+        <input
+          type="text"
+          id="rollInput"
+          placeholder="Enter Roll Number (Example: 2513001)"
+          aria-label="Enter your roll number"
+        />
 
-    <div class="section-heading">
-      <span>NAME SEARCH</span>
-      <h2>Search By Student Name</h2>
-      <p>Find any student from any connected batch instantly.</p>
-    </div>
+        <button onclick="searchRoll()" aria-label="Search by roll number">Search</button>
+      </div>
 
-    <div class="search-panel">
-      <div class="search-icon">@</div>
+      <div id="result"></div>
+    </section>
 
-      <input
-        type="text"
-        id="seniorInput"
-        placeholder="Enter Student Name"
-      />
+    <section class="search-section alt-section" id="name-search">
 
-      <button onclick="searchSenior()">Search</button>
-    </div>
+      <div class="section-heading">
+        <span>NAME SEARCH</span>
+        <h2>Search By Student Name</h2>
+        <p>Find any student from any connected batch instantly.</p>
+      </div>
 
-    <div id="seniorResult"></div>
-  </section>
+      <div class="search-panel">
+        <div class="search-icon" aria-hidden="true">@</div>
+
+        <input
+          type="text"
+          id="seniorInput"
+          placeholder="Enter Student Name"
+          aria-label="Enter student name to search"
+        />
+
+        <button onclick="searchSenior()" aria-label="Search by student name">Search</button>
+      </div>
+
+      <div id="seniorResult"></div>
+    </section>
+  </main>
 
   <footer>
     <div class="footer-logo">MSENET</div>
